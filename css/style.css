@@ -1,0 +1,449 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f8f7f3 0%, #e9e6e0 100%);
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    color: #4a4a4a;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header elegante */
+header {
+    background: linear-gradient(135deg, #8b7355 0%, #a89b87 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
+}
+
+/* Botón CTA del header */
+.header-cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #8b7355, #a89b87);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.4);
+    position: relative;
+    z-index: 2;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.header-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(139, 115, 85, 0.6);
+    background: linear-gradient(135deg, #a89b87, #c4b5a0);
+}
+
+.header-cta-button i {
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* Sección de introducción */
+.introduccion {
+    background: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.introduccion::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #8b7355, #a89b87);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.introduccion h2 {
+    font-size: 2.5rem;
+    color: #8b7355;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.introduccion p {
+    font-size: 1.1rem;
+    color: #6b5b47;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    text-align: justify;
+}
+
+/* Contenedor principal */
+main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Sección de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.producto {
+    background: white;
+    border-radius: 25px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(139, 115, 85, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.producto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #8b7355, #a89b87, #c4b5a0);
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(139, 115, 85, 0.15);
+}
+
+.producto-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #a89b87, #8b7355);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4);
+}
+
+.producto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 auto 2rem;
+    display: block;
+    box-shadow: 0 10px 30px rgba(139, 115, 85, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.05);
+}
+
+.producto h2 {
+    color: #8b7355;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.producto p {
+    color: #6b5b47;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.producto ul {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.producto li {
+    background: linear-gradient(135deg, #f8f7f3, #e9e6e0);
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid #8b7355;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.producto li:hover {
+    background: linear-gradient(135deg, #e9e6e0, #d6cfc3);
+    transform: translateX(10px);
+}
+
+.producto li i {
+    margin-right: 0.5rem;
+    color: #8b7355;
+}
+
+/* Sección de beneficios */
+.beneficios {
+    background: linear-gradient(135deg, #f8f7f3 0%, #e9e6e0 100%);
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+    border-radius: 25px;
+}
+
+.beneficios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #8b7355;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.beneficio {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(139, 115, 85, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(139, 115, 85, 0.15);
+}
+
+.beneficio i {
+    font-size: 3rem;
+    color: #8b7355;
+    margin-bottom: 1rem;
+}
+
+.beneficio h3 {
+    color: #4a4a4a;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.beneficio p {
+    color: #6b5b47;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #4a4a4a 0%, #6b5b47 100%);
+    color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #c4b5a0;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .introduccion h2 {
+        font-size: 2rem;
+    }
+    
+    .productos {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .producto {
+        padding: 2rem;
+    }
+    
+    .producto img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.producto {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.producto:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.beneficio {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.beneficio:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.beneficio:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.beneficio:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos para enlaces si los agregas */
+a {
+    color: #8b7355;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6b5b47;
+}
+
+/* Botón de llamada a la acción */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #8b7355, #a89b87);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.6);
+}
+
+.cta-button i {
+    margin-right: 0.5rem;
+}
