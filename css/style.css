@@ -39,6 +39,20 @@ header::before {
     opacity: 0.3;
 }
 
+/* Para pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+    header {
+        height: 60vh;
+        padding: 6rem 2rem;
+    }
+    
+    header::before {
+        background-size: 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
 .logo {
     width: 120px;
     height: 120px;
